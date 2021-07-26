@@ -1,0 +1,12 @@
+name: Test Actor
+on:
+  pull_request_target:
+    branches: [main]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+
+      - run: echo "${{ toJSON(github) }}"
+      - run: env
